@@ -1,0 +1,2 @@
+gophish.log
+geckodriver.log
