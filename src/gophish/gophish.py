@@ -67,8 +67,8 @@ class Phishing:
 							zip_ref.extractall(f'{self.resources}/binaries')
 							os.chmod(f'{self.resources}/binaries/ngrok', 0o777)
 							os.remove(f'{self.resources}/binaries/ngrok-stable-linux-386.zip')
-		except:
-			print(f"\n{Fore.RED}[ Error ]{Fore.YELLOW} Something happen during dependency installation!")
+		except Exception as error:
+			print(f"\n{Fore.RED}[ Error ]{Fore.YELLOW} {error}")
 			sys.exit()
 
 		else:
