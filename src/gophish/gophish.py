@@ -45,7 +45,7 @@ class Phishing:
 						
 					else:
 						urllib.request.urlretrieve('https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip', f'{self.resources}/binaries/ngrok-stable-linux-amd64.zip')
-						with zipfile.ZipFile(f'{self.resources}/binaries/ngrok.zip', 'r') as zip_ref:
+						with zipfile.ZipFile(f'{self.resources}/binaries/ngrok-stable-linux-amd64.zip', 'r') as zip_ref:
 							zip_ref.extractall(f'{self.resources}/binaries')
 							os.chmod(f'{self.resources}/binaries/ngrok', 0o777)
 							os.remove(f'{self.resources}/binaries/ngrok-stable-linux-amd64.zip')
