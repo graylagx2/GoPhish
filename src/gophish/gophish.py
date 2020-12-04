@@ -65,7 +65,7 @@ class Phishing:
 							os.chmod(f'{self.resources}/binaries/ngrok', 0o777)
 							os.remove(f'{self.resources}/binaries/ngrok-stable-linux-386.zip')
 
-			elif not os.path.isfile(f'{self.resources}/binaries/geckodriver'):
+			if not os.path.isfile(f'{self.resources}/binaries/geckodriver'):
 				if '64' in arch:
 					urllib.request.urlretrieve('https://github.com/mozilla/geckodriver/releases/download/v0.28.0/geckodriver-v0.28.0-linux64.tar.gz', f'{self.resources}/binaries/geckodriver-v0.28.0-linux64.tar.gz')
 					with tarfile.open(f'{self.resources}/binaries/geckodriver-v0.28.0-linux64.tar.gz') as tar_ref:
