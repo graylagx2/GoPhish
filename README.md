@@ -2,14 +2,9 @@
 Phishing tool
 ![gophish logo](https://github.com/graylagx2/Images/blob/master/gophish_logo.png)
 
-**PREREQUISITES**
+**Usage**
 
-    Python 3.6 or >
-    pip3
-    
-**SETUP PYTHON3 & PIP3**
-
-    sudo apt-get install python3 python3-pip python3-dev -y
+    gophish
 
 **Social Engineering Phishing Tool**
   
