@@ -12,7 +12,6 @@ setup(
     package_data={'gophish': ['res/*']},
     install_requires=[
         'colorama',
-        'geckodriver-autoinstaller',
         'pyfiglet==0.8.post1',
         'pyshorteners',
         'selenium',
