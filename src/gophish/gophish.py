@@ -91,7 +91,7 @@ class Phishing:
 		# Printing the site templates in two columns for a option menu
 		# Warning if there are a odd number of templates in folder you will be missing one on the print
 		space = " "
-		templates = [ f"{Fore.YELLOW}{opt}) {Fore.GREEN}{t+space * (18 - len(t))}{Fore.RESET}" if len(t) < 11 else f"{Fore.YELLOW}{opt}) {Fore.GREEN}{t}{Fore.RESET}" for opt, t in enumerate(os.listdir(f'{self.resources}/templates'), 1) ]
+		templates = [ f"{Fore.YELLOW}{opt}) {Fore.GREEN}{t+space * (18 - len(t))}{Fore.RESET}" if len(t) < 11 else f"{Fore.YELLOW}{opt}) {Fore.GREEN}{t}{Fore.RESET}" for opt, t in enumerate(sorted(os.listdir(f'{self.resources}/templates')), 1) ]
 		num_templates = len(templates)
 		templates_col_1 = templates[:len(templates)//2]
 		templates_col_2 = templates[len(templates)//2:]
