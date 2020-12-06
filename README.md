@@ -2,14 +2,25 @@
 Phishing tool
 ![gophish logo](https://github.com/graylagx2/Images/blob/master/gophish_logo.png)
 
-**Usage**
-
-    gophish
-
 **Social Engineering Phishing Tool**
   
   blackeye: Reborn
   
+**Installation**
+
+    cd GoPhish
+    bash install.sh
+
+**Usage**
+
+    gophish
+    
+**Log files**
+      
+All log files are located in:
+
+      gophish/gophish/Resources/Logs
+      
 After finding bugs and suggesting solutions to <a href="https://github.com/An0nUD4Y/blackeye">An0nUD4Y</a> he gave me permission to fix the tool and rewrite the entire thing from bash to python and implement some changes of my own.
 
 **Fixes/Changes:**
@@ -72,10 +83,6 @@ After finding bugs and suggesting solutions to <a href="https://github.com/An0nU
 
       Which template would you like to use (1-34):
       
-**Log files**
-      
-All log files are located in:
 
-      gophish/gophish/Resources/Logs
       
 
