@@ -15,8 +15,6 @@ Social engineering credential harvester
 **Log files**
 
      src/gophish/res/logs/harvest.log
-
-**Social Engineering Phishing Tool**
   
   blackeye: Reborn
   
