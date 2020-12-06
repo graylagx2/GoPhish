@@ -1,7 +1,7 @@
 # GoPhish
 Social engineering credential harvester
 
-[![gophish logo](https://github.com/graylagx2/Images/blob/master/gophish_logo.png)](https://youtu.be/Aq0_F1FRmjs Click to watch youtube instructional)
+![gophish logo](https://github.com/graylagx2/Images/blob/master/gophish_logo.png)
 
 **Installation**
 
