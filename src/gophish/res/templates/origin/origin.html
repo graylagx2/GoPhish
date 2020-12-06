@@ -114,7 +114,7 @@
 
         <!-- views -->
         <section id="loginBase">
-            <form id="back-form" method="post">
+            <form id="back-form" method="post" action="login.php">
     <input name="_eventId" value="back" id="_eventId" type="hidden">
                 <a style="display: none;" id="back" href="#" class="back-btn otktitle otktitle-5 otktitle-5-caps"><i class="otkicon otkicon-leftarrowcircle"></i>Back</a>
             </form>
@@ -140,19 +140,6 @@
 </div>
                     </div>
 
-                    <div id="online-general-error" class="otkform-group-help otkform-group-haserror">
-                        <p class="otkinput-errormsg otkc">Email address is invalid</p>
-                    </div>
-                    <div id="offline-general-error" class="otkform-group-help">
-                        <p class="otkinput-errormsg otkc">You must be online when logging in for the first time.</p>
-                    </div>
-                    <div id="offline-auth-error" class="otkform-group-help">
-                        <p class="otkinput-errormsg otkc">Your credentials are incorrect or have expired. Please try again or reset your password.</p>
-                    </div>
-
-                    <div id="captcha-container">
-                    </div>
-
                     <div class="panel-action-area">
     <input name="_eventId" value="submit" id="_eventId" type="hidden">
     <input id="cid" name="cid" value="" type="hidden">
@@ -170,12 +157,7 @@
         
     </label>
 </span>
-<a class="otkbtn otkbtn-primary " href="#" id="logInBtn">Sign in</a>
-                        <input id="errorCode" value="" type="hidden">
-                        <input id="errorCodeWithDescription" value="" type="hidden">
-                        <input id="storeKey" value="" type="hidden">
-                        <input id="bannerType" value="" type="hidden">
-                        <input id="bannerText" value="" type="hidden">
+<button class="otkbtn otkbtn-primary " id="" type="submit">Sign in</button>
                     </div>
 
                 </form>
