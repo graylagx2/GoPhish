@@ -39,10 +39,6 @@ After finding bugs and suggesting solutions to <a href="https://github.com/An0nU
   
   This tools is free and open source for security research and only to be used in controlled environments. By using this tool you agree to only deploy this tool in environments you have permission to do so in. You are responsible for how you use this tool.
   
-  
-  **Setup**
-  
-  Just download and install. There is a install.sh script inside the root directory. run this script to install gophish as a command.
       
       cd gophish 
       bash install.sh
