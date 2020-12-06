@@ -2,7 +2,10 @@
 Social engineering credential harvester
 
 ![gophish logo](https://github.com/graylagx2/Images/blob/master/gophish_logo.png)
-[![Watch the video](https://github.com/graylagx2/Images/blob/master/screenshot (22).png)](https://youtu.be/Aq0_F1FRmjs)
+
+[![Watch the video](https://github.com/graylagx2/images/blob/master/Screenshot%20(22).png)](https://youtu.be/Aq0_F1FRmjs)
+
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Aq0_F1FRmjs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Installation**
