@@ -7,7 +7,7 @@ setup(
     author_email = "graylagx2@gmail.com",
     description = ("Social engineering tool for credential harvesting"),
     url = "https://github.com/graylagx2/GoPhish",
-    packages=['gophish'],
+    packages=['gophish', 'gophish'],
     package_dir={'gophish': 'src'},
     package_data={'gophish': ['res/*']},
     install_requires=[
