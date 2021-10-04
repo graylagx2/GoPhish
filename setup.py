@@ -14,7 +14,7 @@ setup(
         'colorama',
         'pyfiglet==0.8.post1',
         'pyshorteners',
-        'selenium',
+        'selenium==3.141.0',
         'watchdog'
     ],
     entry_points = {
